@@ -12,15 +12,15 @@ export type TabRoutes = {
 
 export type TabRoutesProps = RouteProp<TabRoutes>;
 
-export interface TabNavigationItem<K> {
-    name: K;
+export interface TabNavigationItem {
+    name: keyof TabRoutes;
     component: React.FC<any>;
     icon: string;
     iconActive: string;
     displayName: string;
 }
 
-export const TabNavigation: { [K in keyof TabRoutes]: TabNavigationItem<K> } = {
+export const TabNavigation: { [K in keyof TabRoutes]: TabNavigationItem } = {
     home: {
         name: 'home',
         component: HomeScreen,
