@@ -7,7 +7,7 @@ import { icons } from '../res/icons';
 
 const settingsRoutes: SettingsRouteWithParams[] = [{ name: 'Profile' }, { name: 'Notification' }];
 
-const renderItem: ListRenderItem<SettingsRouteWithParams> = ({ item }) => {
+const RenderItem: ListRenderItem<SettingsRouteWithParams> = ({ item }) => {
     const navigation = useNavigation<SettingsNavigationProps>();
 
     const onPress = useCallback(() => {
@@ -26,7 +26,7 @@ export const SettingsScreen: React.FC = () => {
     return (
         <View style={styles.mainContainer}>
             <Text style={styles.title}>Settings</Text>
-            <FlatList data={settingsRoutes} renderItem={renderItem} />
+            <FlatList data={settingsRoutes} renderItem={RenderItem} />
         </View>
     );
 };

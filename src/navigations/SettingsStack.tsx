@@ -9,7 +9,7 @@ const Stack = createStackNavigator<SettingsRoutes>();
 
 export const SettingsStack: React.FC = () => (
     <View style={styles.mainContainer}>
-        <SafeAreaView style={{ flex: 1 }}>
+        <SafeAreaView style={styles.safeAreaView}>
             <Stack.Navigator>
                 <Stack.Screen
                     name="Settings"
@@ -46,5 +46,8 @@ const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
         backgroundColor: '#a9dbd5'
+    },
+    safeAreaView: {
+        flex: 1
     }
 });
